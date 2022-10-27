@@ -8,6 +8,7 @@
 func shortestBridge(grid [][]int) int {
 	type pair struct{ x, y int }
 	dirs := []pair{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+	n := len(grid)
 }
 // @lc code=end
 
