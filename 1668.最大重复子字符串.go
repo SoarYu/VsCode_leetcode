@@ -1,0 +1,28 @@
+/*
+ * @lc app=leetcode.cn id=1668 lang=golang
+ *
+ * [1668] 最大重复子字符串
+ */
+
+// @lc code=start
+func maxRepeating(sequence string, word string) int {
+	m, n := len(sequence), len(word) // 5 - 2 = 3  
+	res := 0
+	for i:=0; i<=m-n; i++ {
+		tmp := 0
+		for i<=m-n && sequence[i:i+n] == word {
+			tmp++
+			i += n
+		}
+		if tmp > res {
+			res = tmp
+		}
+	}
+	return res
+}
+// @lc code=end
+
+/*
+"aaabaaaabaaabaaaabaaaabaaaabaaaaba"
+"aaaba"
+*/
