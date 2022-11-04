@@ -24,9 +24,3 @@ func maxRepeating(sequence string, word string) int {
 	return res
 }
 // @lc code=end
-
-/*
-交汇点只有一个
-"aaabaaaabaaaaba aabaaaabaaaabaaaabaaaaba"
-"aaaba"
-*/
