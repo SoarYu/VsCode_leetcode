@@ -3,6 +3,7 @@
  *
  * [1106] 解析布尔表达式
  */
+package main
 
 // @lc code=start
 func parseBoolExpr(expression string) bool {
@@ -13,10 +14,10 @@ func parseBoolExpr(expression string) bool {
 			t++
 		} else if ch == 'f' {
 			f++
-		} else if ch=='!' || ch=='&' || ch=='|' || ch=='(' {
+		} else if ch == '!' || ch == '&' || ch == '|' || ch == '(' {
 			opsStack = append(opsStack, ch)
 			f, t = 0, 0
-		} else if ch == ')'{
+		} else if ch == ')' {
 			ops := opsStack[len(opsStack)-1]
 			opsStack = opsStack[:len(opsStack)-1]
 			for ops != '(' {
@@ -31,7 +32,7 @@ func parseBoolExpr(expression string) bool {
 			ops = opsStack[len(opsStack)-1]
 			opsStack = opsStack[:len(opsStack)-1]
 			if ops == '!' {
-				if t>0 {
+				if t > 0 {
 					opsStack = append(opsStack, 'f')
 				} else if f > 0 {
 					opsStack = append(opsStack, 't')
@@ -54,5 +55,5 @@ func parseBoolExpr(expression string) bool {
 	}
 	return opsStack[0] == 't'
 }
-// @lc code=end
 
+// @lc code=end

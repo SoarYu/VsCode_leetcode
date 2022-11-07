@@ -3,14 +3,15 @@
  *
  * [1668] 最大重复子字符串
  */
+package main
 
 // @lc code=start
 func maxRepeating(sequence string, word string) int {
-	m, n := len(sequence), len(word) // 5 - 2 = 3  
+	m, n := len(sequence), len(word) // 5 - 2 = 3
 	res := 0
-	for i:=0; i<=m-n; i++{
+	for i := 0; i <= m-n; i++ {
 		tmp := 0
-		for i<=m-n && sequence[i:i+n] == word {
+		for i <= m-n && sequence[i:i+n] == word {
 			tmp++
 			i += n
 		}
@@ -23,4 +24,5 @@ func maxRepeating(sequence string, word string) int {
 	}
 	return res
 }
+
 // @lc code=end
