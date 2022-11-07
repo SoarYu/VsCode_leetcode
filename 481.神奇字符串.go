@@ -3,7 +3,10 @@
  *
  * [481] 神奇字符串
  */
-
+package main
+import(
+	"bytes"
+)
 // @lc code=start
 func magicalString(n int) int {
 	s := make([]byte, 0, n+1)

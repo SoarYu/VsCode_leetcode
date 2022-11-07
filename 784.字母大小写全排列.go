@@ -3,7 +3,7 @@
  *
  * [784] 字母大小写全排列
  */
-
+package main
 // @lc code=start
 func letterCasePermutation(s string) []string {
 	// 

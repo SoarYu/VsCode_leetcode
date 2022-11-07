@@ -3,6 +3,7 @@
  *
  * [901] 股票价格跨度
  */
+package main
 
 // @lc code=start
 type StockSpanner struct {
@@ -11,7 +12,7 @@ type StockSpanner struct {
 }
 
 func Constructor() StockSpanner {
-	return StockSpanner{[][2]int{} , -1}
+	return StockSpanner{[][2]int{}, -1}
 }
 
 func (s *StockSpanner) Next(price int) int {
@@ -20,16 +21,15 @@ func (s *StockSpanner) Next(price int) int {
 		s.stack = append(s.stack, [2]int{0, price})
 		return 1
 	}
-	for len(s.stack)>0 && price >= s.stack[len(s.stack)-1][1] {
+	for len(s.stack) > 0 && price >= s.stack[len(s.stack)-1][1] {
 		s.stack = s.stack[:len(s.stack)-1]
 	}
 	s.stack = append(s.stack, [2]int{s.idx, price})
 	if len(s.stack) == 1 {
 		return s.idx + 1
 	}
-	return s.idx - s.stack[len(stack)-2][0]
+	return s.idx - s.stack[len(s.stack)-2][0]
 }
-
 
 /**
  * Your StockSpanner object will be instantiated and called as such:
@@ -37,4 +37,3 @@ func (s *StockSpanner) Next(price int) int {
  * param_1 := obj.Next(price);
  */
 // @lc code=end
-

@@ -3,6 +3,7 @@
  *
  * [1822] 数组元素积的符号
  */
+package main
 
 // @lc code=start
 func arraySign(nums []int) int {
@@ -10,15 +11,15 @@ func arraySign(nums []int) int {
 	for _, num := range nums {
 		if num == 0 {
 			return 0
-		} 
-        if num < 0 {
-            neg++
-        }
+		}
+		if num < 0 {
+			neg++
+		}
 	}
-    if neg % 2 == 1 {
-        return -1
-    }
+	if neg%2 == 1 {
+		return -1
+	}
 	return 1
 }
-// @lc code=end
 
+// @lc code=end

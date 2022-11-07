@@ -1,4 +1,6 @@
-func shortestBridge(grid [][]int) (ans int) {
+package main
+
+func shortestBridge_answer(grid [][]int) (ans int) {
 	n := len(grid)
 	dirs := []int{-1, 0, 1, 0, -1}
 	type pair struct{ i, j int }

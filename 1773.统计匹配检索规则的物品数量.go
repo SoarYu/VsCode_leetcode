@@ -3,6 +3,7 @@
  *
  * [1773] 统计匹配检索规则的物品数量
  */
+package main
 
 // @lc code=start
 func countMatches(items [][]string, ruleKey string, ruleValue string) int {
@@ -23,5 +24,5 @@ func countMatches(items [][]string, ruleKey string, ruleValue string) int {
 	}
 	return ans
 }
-// @lc code=end
 
+// @lc code=end

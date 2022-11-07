@@ -3,7 +3,10 @@
  *
  * [1662] 检查两个字符串数组是否相等
  */
-
+package main
+import(
+	"strings"
+)
 // @lc code=start
 func arrayStringsAreEqual(word1 []string, word2 []string) bool {
 	return strings.Join(word1, "") == strings.Join(word2, "")

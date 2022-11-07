@@ -3,6 +3,7 @@
  *
  * [1678] 设计 Goal 解析器
  */
+package main
 
 // @lc code=start
 func interpret(command string) string {
