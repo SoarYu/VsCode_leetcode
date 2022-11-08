@@ -31,7 +31,7 @@ func letterCasePermutation(s string) []string {
 	}
 	dfs(0)
 	res := []string{}
-	for key, _ := range resMap {
+	for key := range resMap {
 		res = append(res, key)
 	}
 	return res
