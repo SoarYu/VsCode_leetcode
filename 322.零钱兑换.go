@@ -18,7 +18,8 @@ func coinChange(coins []int, amount int) int {
 			} else if coin == i {
 				dp[i] = 1
 			} else {
-				if a, b := dp[i], dp[i-coin]; b != 0 && a > b+1 {
+				if a, b := dp[i], dp[i-coin]; b != 0 && a != 0 && a < b+1 {
+
 					dp[i] = b + 1
 				}
 			}
