@@ -7,9 +7,7 @@
 /*
 统计频率关键：单调栈
 */
-package daily
-
-import "fmt"
+package hot
 
 type FreqNode struct {
 	val   int
@@ -49,7 +47,6 @@ func (fs *FreqStack) Push(val int) {
 	}
 
 	head.next = newNode
-
 
 	// 调整位置
 	for i := head.index; i-1 >= 0 && head.freq >= fs.headList[i-1].freq; i-- {
