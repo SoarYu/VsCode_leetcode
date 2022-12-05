@@ -15,16 +15,10 @@ package hot
  * }
  */
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 //每个节点 node 的新值等于 原树中大于或等于 node.val 的值之和。
 func convertBST(root *TreeNode) *TreeNode {
 	// 0 1 2 3 4 5 6 7 8
-	// 8 7 6 5 4 3 2 1 0	
+	// 8 7 6 5 4 3 2 1 0
 	sum := 0
 	var deInOrder func(node *TreeNode)
 	deInOrder = func(node *TreeNode) {
@@ -39,6 +33,5 @@ func convertBST(root *TreeNode) *TreeNode {
 
 	return root
 }
-
 
 // @lc code=end

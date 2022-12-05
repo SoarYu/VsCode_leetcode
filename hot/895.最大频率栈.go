@@ -24,7 +24,7 @@ type FreqStack struct {
 	headMap  map[int]*FreqNode
 }
 
-func Constructor() FreqStack {
+func Constructor895() FreqStack {
 	return FreqStack{
 		headList: make([]*FreqNode, 0),
 		headMap:  make(map[int]*FreqNode),
