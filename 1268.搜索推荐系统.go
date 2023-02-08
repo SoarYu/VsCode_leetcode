@@ -7,13 +7,13 @@ package daily
 
 import "sort"
 
-type trie struct {
+type trie1268 struct {
 	children map[byte]*trie
 	val      byte
 	isEnd    bool
 }
 
-func NewTrie() *trie {
+func NewTrie() *trie1268 {
 	return &trie{children: make(map[byte]*trie)}
 }
 
